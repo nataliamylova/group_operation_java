@@ -74,20 +74,6 @@ public class SmokeTest extends BaseTest {
         Thread.sleep(2500);
 
 
-//        WebElement buttonSave = getDriver().findElement(By.name("Submit"));
-//        buttonSave.click();
-//        Thread.sleep(2500);
-//        //Main menu (press dashboard), find FreestyleProject and press
-//        WebElement dashboard = getDriver().findElement(By.xpath("//a[.='Dashboard']"));
-//        dashboard.click();
-//        Thread.sleep(2500);
-//        WebElement nameDashboard = getDriver().findElement(By.xpath("//span[.='FreestyleProject']"));
-//        nameDashboard.click();
-//        Thread.sleep(2500);
-//        WebElement addDescription = getDriver().findElement(By.id("description-link"));
-//        addDescription.click();
-//        Thread.sleep(2500);
-
         WebElement writeDescription = getDriver().findElement(By.name("description"));
         writeDescription.click();
         writeDescription.sendKeys("Description");
@@ -102,25 +88,6 @@ public class SmokeTest extends BaseTest {
         WebElement dashboardAgain = getDriver().findElement(By.xpath("//a[.='Dashboard']"));
         dashboardAgain.click();
         Thread.sleep(3500);
-        // Next? Find icon disable?
-        //   WebElement dissable = getDriver().findElement(By.xpath("//tr[@class='disabledJob job-status-disabled']/td[@class='jenkins-table__cell--tight jenkins-table__icon']"));
-
-        // if find - ok
-        // Assert.assertEquals(nameDashboard.getText(), "text");
-    }
-
-
-//    Click a “New item” button
-//    Enter pipiline name in the input name
-//    Choose “Pipeline“ item
-//    Click on activated “OK“ button
-//    Click on “Save” button
-//    Click on “Dashboard“ chevron
-//    Choose “New item“ in dropdown menu
-//    Enter name of the previously created pipeline in the input field
-//    Expected results:
-//
-//            “A job already exists with the name …” warning message appears
 
 
     @Test
@@ -144,30 +111,6 @@ public class SmokeTest extends BaseTest {
         Assert.assertTrue(getDriver().findElement(By.tagName("p")).isDisplayed());
 
     }
-
-//    @Test
-//    public void testButtomOk() {
-//
-//        getDriver().findElement(By.xpath("//a[.='New Item']")).click();
-//        getDriver().findElement(By.id("name")).click();
-//        getDriver().findElement(By.id("name")).sendKeys("TestProject");
-//        getDriver().findElement(By.xpath("//div[@class='btn-decorator']")).click();
-//
-//    }
-    // чужой тест
-//@Test
-//    public void testCreateFolder()  throws InterruptedException {
-//        getDriver().findElement(By.xpath("//*[text()='New Item']/ancestor::div[contains(@class,'task')]")).click();
-//        getDriver().findElement(By.xpath("//input[@id=\"name\"]")).sendKeys("Folder 1");
-//        getDriver().findElement(By.xpath("//*[text()='Folder']/ancestor::li")).click();
-//        getDriver().findElement(By.xpath("//*[@id=\"ok-button\"]")).click();
-//        getDriver().findElement(By.xpath("//*[@name=\"Submit\"]")).click();
-//
-//        Thread.sleep(2500);
-//        Assert.assertEquals(
-//                getDriver().findElement(By.xpath("//*[@id=\"main-panel\"]/h1")).getText(),
-//                "Folder 1");
-//    }
 
     @Test
     public void testCreateNewFolder() throws InterruptedException {
@@ -194,68 +137,3 @@ public class SmokeTest extends BaseTest {
 
         Assert.assertEquals(getDriver().findElement(By.cssSelector(".empty-state-block > h1")).getText(), "Welcome to Jenkins!");
     }
-
-
-
-//@Test
-//public void deleteFolderFromDropDownTest() throws InterruptedException {
-//    final String folderName = "DeleteFolderFromDropDown";
-//
-//    createFolder(folderName);
-//
-//    WebElement element1 = getDriver().findElement(By.xpath("//span[.='DeleteFolderFromDropDown']"));
-//    Actions actions = new Actions(getDriver());
-//    actions.moveToElement(element1).perform();
-//
-//    getDriver().findElement(By.xpath("//tr[@id='DeleteFolderFromDropDown']//button[@class='jenkins-menu-dropdown-chevron']")).click();
-//
-//    getDriver().findElement(By.cssSelector("[href='/job/DeleteFolderFromDropDown/doDelete']")).click();
-//
-//    getDriver().findElement(By.xpath("//button[@class='jenkins-button jenkins-button--primary ']")).click();
-//
-//    Assert.assertEquals(getDriver().findElement(By.cssSelector(".empty-state-block > h1")).getText(), "Welcome to Jenkins!");
-//}
-//
-
-
-
-//        /td/button[@class = "jenkins-menu-dropdown-chevron"]
-
-
-
-//        actions.moveToElement(element1).perform();
-
-//        wait = new WebDriverWait(getDriver(), Duration.ofSeconds(1));
-//        WebElement dropdownСhevron = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@class='jenkins-dropdown__item']")));
-
-
-//        By.cssSelector("[data-href='http://localhost:8080/job/jmgjg/']")
-
-//        getDriver().findElement(By.xpath("//a[.='Dashboard']")).click();
-//
-//
-//        Assert.assertTrue(getDriver().findElement(By.xpath("//span[.='New Folder']")).isDisplayed());
-    }
-
-
-//    @Test
-//    public void testRenameFolder() {
-//        getDriver().findElement(By.xpath("//a[.='New Item']")).click();
-//        getDriver().findElement(By.id("name")).click();
-//        getDriver().findElement(By.id("name")).sendKeys("New Folder");
-//        getDriver().findElement(By.xpath("//label[.='Folder']")).click();
-//        getDriver().findElement(By.id("ok-button")).click();
-//        getDriver().findElement(By.name("Submit")).click();
-//
-//        getDriver().findElement(By.linkText("Rename")).click();
-//        getDriver().findElement( By.xpath("//input[@name='newName']")).clear();
-//        getDriver().findElement( By.xpath("//input[@name='newName']")).sendKeys("Newest Folder");
-//        getDriver().findElement(By.xpath("//button[@name='Submit']")).click();
-//
-//        Assert.assertTrue(getDriver().findElement(By.xpath("//h1[contains(.,'Newest Folder')]")).isDisplayed());
-//    }
-
-
-
-
-

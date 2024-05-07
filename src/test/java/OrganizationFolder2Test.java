@@ -1,4 +1,4 @@
-//package school.redrover;
+
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -98,63 +98,6 @@ public class OrganizationFolder2Test extends BaseTest{
         getDriver().findElement(By.name("Submit")).click();
         getDriver().findElement(By.xpath("//a[.='Dashboard']")).click();
     }
-    //тест на view
-//    @Test(dependsOnMethods = "testDeleteOrganizationFolder")
-//    public void testCreateMultipleOrganizationFolders() {
-////        // Создаем первую папку
-////        createOrganizationFolder("New Organization Folder 1");
-////
-////        // Создаем вторую папку
-////        createOrganizationFolder("New Organization Folder 2");
-////
-////        // Создаем третью папку
-////        createOrganizationFolder("New Organization Folder 3");
-////
-////        // Создаем четвертую папку
-////        createOrganizationFolder("New Organization Folder 4");
-////
-////        // Создаем пятую папку
-////        createOrganizationFolder("New Organization Folder 5");
-//
-//        for (int i = 1; i <= 9; i++) {
-//            createOrganizationFolder("New Organization Folder " + i);
-//        }
-//
-//        getDriver().findElement(By.xpath("//a[@href='/newView']")).click();
-//        getDriver().findElement(By.xpath("//input[@id='name']")).sendKeys("New view 1");
-//
-//        getDriver().findElement(By.xpath("//label[.='List View']")).click();
-//        getDriver().findElement(By.xpath("//button[@id='ok']")).click();
-//
-////        if (i % 2 == 0) {
-////            getDriver().findElement(By.xpath("//label[.='New Organization Folder 2']")).click();
-////            getDriver().findElement(By.xpath("//label[.='New Organization Folder 4']")).click();
-////
-////        for (int i = 2; i <= 10; i += 2) { // начиная с 2 и шаг 2, чтобы добавить только четные номера
-////            if (i % 2 == 0) {
-////                getDriver().findElement(By.xpath("//label[.='New Organization Folder " + i + "']")).click();
-////            }
-////        }
-//
-////        getDriver().findElement(By.xpath("//button[@name='Submit']")).click();
-////        getDriver().findElement(By.xpath("//button[@name='Submit']")).click();
-////
-////        Assert.assertTrue(getDriver().findElement(By.xpath("//a[.='New view 1']")).isDisplayed());
-////        }
-//// Добавляем четные папки только в вид "New view 1"
-//        for (int i = 2; i <= 9; i += 2) { // начиная с 2 и шаг 2, чтобы добавить только четные номера
-//            if (i % 2 == 0) {
-//                getDriver().findElement(By.xpath("//label[.='New Organization Folder " + i + "']")).click();
-//            }
-//        }
-//        // Клик на кнопку "Submit" для создания нового вида
-//        getDriver().findElement(By.xpath("//button[@name='Submit']"))
-//                .click();
-//
-//        // Проверка, что новый вид отображается
-//        Assert.assertTrue(getDriver().findElement(By.xpath("//a[.='New view 1']"))
-//                .isDisplayed());
-//        }
 
     @Test(dependsOnMethods = "testDeleteOrganizationFolder")
     public void testCreateMultipleOrganizationFoldersSecond() {
@@ -199,18 +142,4 @@ public class OrganizationFolder2Test extends BaseTest{
 
 }
 
-        //POMMMMMMMMMMM
-
-//    @Test(dependsOnMethods = "testCreateOrganizationFolder")
-//    public void testRenameOrganizationFolderPOM() {
-//        .clickFolderName();
-//        .clickRenameLink();
-//        .clearAndEnterNewName("Organization Folder");
-//        .clickSubmitButton();
-//        .clickDashboardLink();
-//
-//        // Проверка результата с использованием POM
-//        Assert.assertTrue(homePage.isRenamedFolderDisplayed());
-//    }
-//    }
 
