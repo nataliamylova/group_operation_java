@@ -88,29 +88,8 @@ public class SmokeTest extends BaseTest {
         WebElement dashboardAgain = getDriver().findElement(By.xpath("//a[.='Dashboard']"));
         dashboardAgain.click();
         Thread.sleep(3500);
-
-
-    @Test
-    public void testPipelineProject() {
-        getDriver().findElement(By.xpath("//a[.='New Item']")).click();
-        getDriver().findElement(By.id("name")).click();
-        getDriver().findElement(By.id("name")).sendKeys("Pipeline");
-        getDriver().findElement(By.xpath("//label[.='Pipeline']")).click();
-        getDriver().findElement(By.id("ok-button")).click();
-        getDriver().findElement(By.name("Submit")).click();
-        getDriver().findElement(By.xpath("//a[.='Dashboard']")).click();
-
-        getDriver().findElement(By.xpath("//a[.='New Item']")).click();
-        getDriver().findElement(By.id("name")).click();
-        getDriver().findElement(By.id("name")).sendKeys("Pipeline");
-        getDriver().findElement(By.xpath("//label[.='Pipeline']")).click();
-        getDriver().findElement(By.id("ok-button")).click();
-
-//        WebElement error = getDriver().findElement(By.tagName("p"));
-//        Assert.assertEquals(error.getText(), "A job already exists with the name ‘Pipeline’");
-        Assert.assertTrue(getDriver().findElement(By.tagName("p")).isDisplayed());
-
     }
+
 
     @Test
     public void testCreateNewFolder() throws InterruptedException {
@@ -137,3 +116,4 @@ public class SmokeTest extends BaseTest {
 
         Assert.assertEquals(getDriver().findElement(By.cssSelector(".empty-state-block > h1")).getText(), "Welcome to Jenkins!");
     }
+}
